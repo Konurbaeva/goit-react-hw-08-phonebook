@@ -10,7 +10,7 @@ export const ContactEditor = () => {
     e.preventDefault();
     const form = e.currentTarget;
     const text = form.elements.text.value;
-    // TODO Madina
+    // TODO Madina use toastify?
     // if (text === '') {
     //   return toast.error('Please enter contact');
     // }

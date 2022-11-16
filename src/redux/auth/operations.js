@@ -58,6 +58,7 @@ export const logOut = createAsyncThunk('users/logout', async (_, thunkAPI) => {
   }
 });
 
+// TODO Madina check refreshUser is necessary
 /*
  * GET @ /users/me
  * headers: Authorization: Bearer token
