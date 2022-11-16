@@ -6,6 +6,7 @@ import css from './UserMenu.module.css';
 export const UserMenu = () => {
   const dispatch = useDispatch();
   const { user } = useAuth();
+  console.log('UserMenu user: ', user);
 
   const handleLogOut = () => dispatch(logOut());
 
