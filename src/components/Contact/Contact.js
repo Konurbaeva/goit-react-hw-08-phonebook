@@ -2,14 +2,30 @@ import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/operations';
 import css from './Contact.module.css';
 
-export const Contact = ({ id, text }) => {
+// TODO Madina check content of contact
+// export const Contact = ({ id, text }) => {
+//   const dispatch = useDispatch();
+
+//   const handleDelete = () => dispatch(deleteContact(id));
+
+//   return (
+//     <div className={css.wrapper}>
+//       <p className={css.text}>{text}</p>
+//       <button type="button" className={css.button} onClick={handleDelete}>
+//         Delete
+//       </button>
+//     </div>
+//   );
+// };
+
+export const Contact = ({ id, name, phone }) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => dispatch(deleteContact(id));
 
   return (
     <div className={css.wrapper}>
-      <p className={css.text}>{text}</p>
+      <p className={css.text}>{name} {phone}</p>
       <button type="button" className={css.button} onClick={handleDelete}>
         Delete
       </button>
