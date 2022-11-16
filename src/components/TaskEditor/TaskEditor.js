@@ -1,6 +1,6 @@
 
 import { useDispatch } from 'react-redux';
-import { addTask } from 'redux/tasks/operations';
+import { addTask } from 'redux/contacts/operations';
 import css from './TaskEditor.module.css';
 
 export const TaskEditor = () => {
