@@ -1,6 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { logIn, logOut, refreshUser, register } from './operations';
 
+/* 
+Response on POST https://connections-api.herokuapp.com/users/signup
+{
+  "user": {
+      "name": "Adrian Cross",
+      "email": "madina@gmail.com"
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzc1MTMwMzEwNDQ3ZDAwMTZiM2VkNTQiLCJpYXQiOjE2Njg2MTY5NjN9.TwIfgxf4Rqdp17nxIN0jDdIOQsgww2cKY2n38NBhhCk"
+} */
+
+
 const authSlice = createSlice({
   name: 'auth',
   initialState: {

@@ -1,4 +1,4 @@
-import toast from 'react-hot-toast';
+
 import { useDispatch } from 'react-redux';
 import { addTask } from 'redux/tasks/operations';
 import css from './TaskEditor.module.css';
@@ -10,9 +10,10 @@ export const TaskEditor = () => {
     e.preventDefault();
     const form = e.currentTarget;
     const text = form.elements.text.value;
-    if (text === '') {
-      return toast.error('Please enter task text');
-    }
+    // TODO Madina
+    // if (text === '') {
+    //   return toast.error('Please enter task text');
+    // }
 
     dispatch(addTask(text));
     form.reset();
