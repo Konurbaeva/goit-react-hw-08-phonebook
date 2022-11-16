@@ -20,6 +20,7 @@ export const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
 
+  // TODO Madina check navigating to pages
   return isRefreshing ? (
     'Fetching user data...'
   ) : (
@@ -29,17 +30,17 @@ export const App = () => {
         <Route
           path="/register"
           element={
-            <RestrictedRoute component={RegisterPage} redirectTo="/tasks" />
+            <RestrictedRoute component={RegisterPage} redirectTo="/contacts" />
           }
         />
         <Route
           path="/login"
           element={
-            <RestrictedRoute component={LoginPage} redirectTo="/tasks" />
+            <RestrictedRoute component={LoginPage} redirectTo="/contacts" />
           }
         />
         <Route
-          path="/tasks"
+          path="/contacts"
           element={<PrivateRoute component={TasksPage} redirectTo="/login" />}
         />
       </Route>
