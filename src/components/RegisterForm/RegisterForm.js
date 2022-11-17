@@ -17,7 +17,7 @@ export const RegisterForm = () => {
     );
     form.reset();
   };
-
+// TODO Madina field validation?
   return (
     <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
       <label className={css.label} required>
