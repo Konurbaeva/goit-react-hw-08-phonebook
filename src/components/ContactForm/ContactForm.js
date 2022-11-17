@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 
 import { getFilteredContacts } from 'redux/contacts/selectors'
-import css from './ContactEditor.module.css';
+import css from './ContactForm.module.css';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// export const ContactEditor = () => {
+// export const ContactForm = () => {
 //   const dispatch = useDispatch();
 
 //   const handleSubmit = e => {
@@ -35,7 +35,7 @@ import 'react-toastify/dist/ReactToastify.css';
 // };
 
 // id, name, phone
-// export const ContactEditor = () => {
+// export const ContactForm = () => {
 //   const dispatch = useDispatch();
 
 //   const handleSubmit = e => {
@@ -64,7 +64,7 @@ import 'react-toastify/dist/ReactToastify.css';
 //   );
 // };
 
-export function ContactEditor() {
+export function ContactForm() {
   const getContacts = useSelector(getFilteredContacts)
    const dispatch = useDispatch();
  
