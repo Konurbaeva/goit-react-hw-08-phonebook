@@ -1,7 +1,7 @@
 // import styled from 'styled-components';
 
 // import { useSelector, useDispatch } from 'react-redux';
-// import { getFilter } from "../../redux/filter/filter-selectors"
+// import { getFilter } from "../../redux/filter/selectors"
 
 // import { filterContacts } from '../../redux/filter/filter-slice'
 
@@ -39,8 +39,8 @@
 // }
 
 import { useSelector, useDispatch } from 'react-redux';
-import { getFilter } from "../../redux/filter/filter-selectors"
-import { filterContacts } from '../../redux/filter/filter-slice'
+import { getFilter } from "../../redux/filter/selectors.js"
+import { filterContacts } from '../../redux/filter/slice'
 
 export function Filter() {
  const filter = useSelector(getFilter);
