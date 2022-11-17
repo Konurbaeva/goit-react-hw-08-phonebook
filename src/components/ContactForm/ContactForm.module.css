@@ -14,18 +14,8 @@
   line-height: 16px;
   letter-spacing: 0.01em;
   resize: none;
+  margin-bottom: 16px;
 }
-
-/* .button {
-  border: none;
-  font: inherit;
-  cursor: pointer;
-  outline: none;
-  padding: 0 12px;
-  border-radius: 8px;
-  background-color: #3f51b5;
-  color: #fff;
-} */
 
 .button {
   border: none;
