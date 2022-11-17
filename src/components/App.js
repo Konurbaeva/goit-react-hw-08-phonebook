@@ -24,47 +24,27 @@ export const App = () => {
   return isRefreshing ? (
     'Fetching user data...'
   ) : (
+ 
     <Routes>
-    <Route path="/" element={<Layout />}>
-      <Route index exact element={<HomePage />} />
-      <Route
-        path="/register"
-        element={
-          <RestrictedRoute element={<RegisterPage/>} redirectTo="/contacts" />
-        }
-      />
-      <Route
-        path="/login"
-        element={
-          <RestrictedRoute element={<LoginPage/>} redirectTo="/contacts" />
-        }
-      />
-      <Route
-        path="/contacts"
-        element={<PrivateRoute element={<Contacts/>} redirectTo="/login" />}
-      />
-    </Route>
-  </Routes>
-    // <Routes>
-    //   <Route path="/" element={<Layout />}>
-    //     <Route index exact element={<HomePage />} />
-    //     <Route
-    //       path="/register"
-    //       element={
-    //         <RestrictedRoute component={RegisterPage} redirectTo="/contacts" />
-    //       }
-    //     />
-    //     <Route
-    //       path="/login"
-    //       element={
-    //         <RestrictedRoute component={LoginPage} redirectTo="/contacts" />
-    //       }
-    //     />
-    //     <Route
-    //       path="/contacts"
-    //       element={<PrivateRoute component={Contacts} redirectTo="/login" />}
-    //     />
-    //   </Route>
-    // </Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index exact element={<HomePage />} />
+        <Route
+          path="/register"
+          element={
+            <RestrictedRoute component={RegisterPage} redirectTo="/contacts" />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <RestrictedRoute component={LoginPage} redirectTo="/contacts" />
+          }
+        />
+        <Route
+          path="/contacts"
+          element={<PrivateRoute component={Contacts} redirectTo="/login" />}
+        />
+      </Route>
+    </Routes>
   );
 };
