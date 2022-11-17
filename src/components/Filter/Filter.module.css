@@ -1,0 +1,17 @@
+
+  .input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font: inherit;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    resize: none;
+    margin-bottom: 16px;
+  }
+
+  div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }

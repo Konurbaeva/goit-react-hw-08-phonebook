@@ -6,6 +6,8 @@ import { filterContacts } from '../../redux/filter/slice'
 
 import  { selectFilter } from '../../redux/contacts/selectors'
 
+import css from './Filter.module.css';
+
 export function Filter() {
 // const filter = useSelector(getFilter);
  const filter = useSelector(selectFilter);
@@ -20,13 +22,14 @@ const handleChange = (e) => {
 
   return (
     <div>
-      <p>Find contacts by name</p>
+      <div>Find contacts by name</div>
       <input
         onChange={handleChange}
         placeholder="Search ..."
         type="text"
         name="filter" 
         value={filter} 
+        className={css.input}
       />
     </div>
   );
