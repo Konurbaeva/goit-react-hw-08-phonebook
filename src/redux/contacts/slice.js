@@ -48,10 +48,16 @@ const contactsSlice = createSlice({
     // [addContact.fulfilled] (state, action) {
     //   state.items =[action.payload, ...state.items]
     //  },
+    // [deleteContact.fulfilled](state, action) {
+    //   state.isLoading = false;
+    //   state.error = null;
+    //   const index = state.items.findIndex(contact => contact.id === action.payload);
+    //   state.items.splice(index, 1);
+    // },
     [deleteContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
-      const index = state.items.findIndex(contact => contact.id === action.payload);
+      const index = state.items.findIndex(contact => contact.id === action.payload.id);
       state.items.splice(index, 1);
     },
   },
