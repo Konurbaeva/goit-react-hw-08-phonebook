@@ -31,6 +31,21 @@ export function ContactForm() {
 
       return
     }
+    else if(!form.elements.name.value){
+      toast.warn('🦄 Provide name!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+
+      return
+    }
+
 
     const action = addContact({name:form.elements.name.value, number:form.elements.number.value})
     dispatch(action)
