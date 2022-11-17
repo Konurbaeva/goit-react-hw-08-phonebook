@@ -20,13 +20,13 @@ export const RegisterForm = () => {
 
   return (
     <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-      <label className={css.label}>
+      <label className={css.label} required>
         Username
-        <input type="text" name="name" />
+        <input type="text" name="name" required/>
       </label>
       <label className={css.label}>
         Email
-        <input type="email" name="email" />
+        <input type="email" name="email" required/>
       </label>
       <label className={css.label}>
         Password
