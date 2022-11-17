@@ -20,7 +20,6 @@ export const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  // TODO Madina check navigating to pages
   return isRefreshing ? (
     'Fetching user data...'
   ) : (

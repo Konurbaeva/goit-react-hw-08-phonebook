@@ -5,13 +5,6 @@ import css from './LoginForm.module.css';
 export const LoginForm = () => {
   const dispatch = useDispatch();
 
-  // TODO Madina 
-// POST https://connections-api.herokuapp.com/users/login
-//   {
-//     "email": "teests@test.de",
-//     "password": "123456789"
-// }
-
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;

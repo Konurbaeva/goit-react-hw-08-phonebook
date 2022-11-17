@@ -1,10 +1,7 @@
 export const selectLoading = state => state.contacts.loading;
 
-export const selectFilter = state => state.contacts.filter;
+ export const selectFilter = state => state.contacts.filter;
 
-export const selectAllContacts = state => state.contacts.items;
-
-// TODO Madina 
 export const getFilteredContacts = ({ contacts, filter }) => {
     if (filter.length === 0) {
       return contacts.items;
