@@ -68,30 +68,56 @@ export function ContactForm() {
   const getContacts = useSelector(getFilteredContacts)
    const dispatch = useDispatch();
  
-   const handleSubmit = e => {
-     e.preventDefault();
-     const form = e.target;
-     const contactExists = getContacts.find(item => item.name === form.elements.name.value)
+  //  const handleSubmit = e => {
+  //    e.preventDefault();
+  //    const form = e.target;
+  //    const contactExists = getContacts.find(item => item.name === form.elements.name.value)
  
-     if(contactExists) { 
-       toast.warn('🦄 Contact exists!', {
-         position: "top-right",
-         autoClose: 5000,
-         hideProgressBar: false,
-         closeOnClick: true,
-         pauseOnHover: true,
-         draggable: true,
-         progress: undefined,
-         theme: "light",
-         });
+  //    if(contactExists) { 
+  //      toast.warn('🦄 Contact exists!', {
+  //        position: "top-right",
+  //        autoClose: 5000,
+  //        hideProgressBar: false,
+  //        closeOnClick: true,
+  //        pauseOnHover: true,
+  //        draggable: true,
+  //        progress: undefined,
+  //        theme: "light",
+  //        });
  
-       return
-     }
+  //      return
+  //    }
  
-     const action = addContact({name:form.elements.name.value, number:form.elements.number.value})
-     dispatch(action)
-     form.reset();
-   };
+  //    const action = addContact({name:form.elements.name.value, number:form.elements.number.value})
+  //    dispatch(action)
+  //    form.reset();
+  //  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    const contactExists = getContacts.find(item => item.name === form.elements.name.value)
+
+    if(contactExists) { 
+      toast.warn('🦄 Contact exists!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+
+      return
+    }
+
+    const action = addContact({name:form.elements.name.value, number:form.elements.number.value})
+    dispatch(action)
+    form.reset();
+  };
+
  
    return (
      <form onSubmit={handleSubmit}>
