@@ -41,7 +41,11 @@ export const ContactEditor = () => {
     //   return toast.error('Please enter contact');
     // }
 
-    dispatch(addContact({name: form.elements.name.value, phone: form.elements.phone.value}));
+    // dispatch(addContact({name: form.elements.name.value, phone: form.elements.phone.value}));
+    dispatch(addContact({
+      name: form.elements.name.value,
+      phone: form.elements.phone.value
+    }));
     form.reset();
   };
 
