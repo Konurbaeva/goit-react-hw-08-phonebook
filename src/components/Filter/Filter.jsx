@@ -3,7 +3,7 @@
 // import { useSelector, useDispatch } from 'react-redux';
 // import { getFilter } from "../../redux/filter/selectors"
 
-// import { filterContacts } from '../../redux/filter/filter-slice'
+// import { filterContacts } from '../../redux/filter/slice'
 
 // const Input = styled.input`
 //   padding: 0.5em;
