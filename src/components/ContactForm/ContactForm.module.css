@@ -16,7 +16,7 @@
   resize: none;
 }
 
-.button {
+/* .button {
   border: none;
   font: inherit;
   cursor: pointer;
@@ -25,7 +25,20 @@
   border-radius: 8px;
   background-color: #3f51b5;
   color: #fff;
+} */
+
+.button {
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  margin-left: auto;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: #3f51b5;
+  color: #fff;
 }
+
 
 .button:hover,
 .button:focus {
