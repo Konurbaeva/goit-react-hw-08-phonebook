@@ -8,7 +8,6 @@ import  { selectFilter } from '../../redux/contacts/selectors'
 import css from './Filter.module.css';
 
 export function Filter() {
-// const filter = useSelector(getFilter);
  const filter = useSelector(selectFilter);
  
 const dispatch = useDispatch();
